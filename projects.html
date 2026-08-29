@@ -1,44 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Projects — Caribbean Storytime Studios</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects &mdash; Caribbean Storytime Studios</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav">
-      <a class="logo" href="index.html"><img src="assets/logo.jpg" alt="logo" width="230" height="94"></a>
-      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
-      <nav class="menu">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a class="active" href="projects.html">Projects</a>
-        <a href="partnerships.html">Partnerships</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="section">
-    <div class="container">
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">
+      <img src="assets/logo.jpg" alt="logo">
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" aria-current="page">Projects</a></li>
+        <li><a href="partnerships.html">Partnerships</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
       <h1>Our Projects</h1>
-      <p>Placeholder page — add project listings and descriptions here.</p>
-
-      <section class="grid-3" style="margin-top:24px">
-        <article class="card"><h3>Project Title 1</h3><p>Short description of a project. Replace with real content.</p></article>
-        <article class="card"><h3>Project Title 2</h3><p>Short description of a project. Replace with real content.</p></article>
-        <article class="card"><h3>Project Title 3</h3><p>Short description of a project. Replace with real content.</p></article>
-      </section>
+      <p>Placeholder page &mdash; add project listings and descriptions here.</p>
+      <p><em>Where ancient wisdom meets modern science.</em></p>
+      <img src="assets/herbal-infusion.jpg" alt="Elder preparing a traditional herbal infusion with turmeric, aloe, and moringa" style="margin-top:32px;border-radius:6px;">
     </div>
-  </main>
+  </section>
 
-  <footer class="footer">
-    <div class="container">
-      <div>© <span data-year></span> Caribbean Storytime Studios</div>
+  <section class="section">
+    <div class="wrap">
+      <div class="card-grid">
+        <div class="card">
+          <strong class="card-title">Project Title 1</strong>
+          <p>Short description of a project. Replace with real content.</p>
+        </div>
+        <div class="card">
+          <strong class="card-title">Project Title 2</strong>
+          <p>Short description of a project. Replace with real content.</p>
+        </div>
+        <div class="card">
+          <strong class="card-title">Project Title 3</strong>
+          <p>Short description of a project. Replace with real content.</p>
+        </div>
+      </div>
     </div>
-  </footer>
-  <script src="script.js"></script>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; Caribbean Storytime Studios</p>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.site-nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+  }
+</script>
+
 </body>
 </html>
