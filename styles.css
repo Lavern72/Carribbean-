@@ -1,0 +1,47 @@
+/* Figure styles for filming veranda */
+.fv-figure{
+  position:relative;
+  display:inline-block;
+  max-width:800px;
+  margin:0;
+}
+.fv-figure .fv-img-wrap{
+  width:100%;
+  aspect-ratio:4/5;
+  overflow:hidden;
+  border-radius:4px;
+}
+.fv-figure img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:70% 50%; /* tweak to favor the interview subject */
+  display:block;
+}
+.fv-figure figcaption{
+  position:absolute;
+  right:0;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,0.6);
+  color:#fff;
+  padding:8px 12px;
+  border-radius:4px;
+  font-size:0.95em;
+  max-width:60%;
+}
+
+/* On small screens, let figcaption stack below the image */
+@media (max-width:600px){
+  .fv-figure{ display:block; }
+  .fv-figure figcaption{
+    position:static;
+    transform:none;
+    margin-top:0.5rem;
+    background:transparent;
+    color:inherit;
+    padding:0;
+    border-radius:0;
+    max-width:none;
+  }
+}
