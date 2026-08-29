@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Caribbean Storytime Studios</title>
+<meta name="description" content="Contact Caribbean Storytime Studios for general, media, production, and documentary inquiries.">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html"><img src="assets/logo-mark.png" alt="Caribbean Storytime Studios logo"></a>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.site-nav').classList.toggle('open')">☰</button>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="partnerships.html">Partnerships</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Start a Conversation</p>
+    <h1>Let's create impact together.</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Contact us</h2>
+    <p>Have a general question, media request, speaking invitation, production inquiry, or message for our team? We would be pleased to hear from you.</p>
+
+    <div class="info-grid">
+      <div class="info-item">
+        <dt>Location</dt>
+        <dd>St. Ann, Jamaica</dd>
+      </div>
+      <div class="info-item">
+        <dt>Email</dt>
+        <dd><a href="mailto:lavern@caribbeanstorytimestudios.com">lavern@caribbeanstorytimestudios.com</a><br>
+        <a href="mailto:contact@caribbeanstorytimestudios.com">contact@caribbeanstorytimestudios.com</a></dd>
+      </div>
+    </div>
+
+    <div class="callout">
+      <h3>Interested in supporting our films?</h3>
+      <p>Visit our dedicated Partnerships page for grant funding, sponsorship, broadcast, research, and cultural collaboration opportunities.</p>
+      <a class="btn btn-secondary" href="partnerships.html">Explore Partnerships →</a>
+    </div>
+
+    <form onsubmit="event.preventDefault();">
+      <div class="field">
+        <label for="c-reason">Reason for contact</label>
+        <select id="c-reason">
+          <option>General inquiry</option>
+          <option>Media or press</option>
+          <option>Production inquiry</option>
+          <option>Speaking invitation</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="c-name">Name</label>
+        <input id="c-name" type="text">
+      </div>
+      <div class="field">
+        <label for="c-email">Email</label>
+        <input id="c-email" type="email">
+      </div>
+      <div class="field">
+        <label for="c-message">Message</label>
+        <textarea id="c-message"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send Message →</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <img src="assets/logo.png" alt="Caribbean Storytime Studios" style="max-width:180px;margin:0 auto 20px;">
+    <p>© Caribbean Storytime Studios</p>
+    <p>St. Ann, Jamaica</p>
+  </div>
+</footer>
+
+</body>
+</html>
