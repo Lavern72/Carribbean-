@@ -1,1 +1,86 @@
-/* Removed in revert of PR #1 */
+/* Main styles for Caribbean Storytime Studios
+   Restores basic layout, typography, responsive navigation, hero, grids, and buttons.
+*/
+:root{
+  --max-width:1100px;
+  --accent:#0b6e4f;
+  --muted:#666;
+  --bg:#fff;
+  --surface:#f7f7f7;
+  --radius:8px;
+  --gap:24px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family: 'Jost', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color:#222;
+  line-height:1.5;
+  margin:0;
+  background:var(--bg);
+}
+.container{
+  width:100%;
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:0 20px;
+}
+.site-header{
+  background:linear-gradient(180deg,#ffffffcc,rgba(255,255,255,0.8));
+  position:sticky;
+  top:0;
+  z-index:40;
+  border-bottom:1px solid #eee;
+}
+.container.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+.logo img{display:block;max-width:100%;height:auto}
+.menu{display:flex;gap:18px;align-items:center}
+.menu a{color:#222;text-decoration:none;padding:8px 6px;border-radius:6px}
+.menu a.active{font-weight:600}
+.menu a:hover{background:var(--surface)}
+.menu-toggle{display:none;background:none;border:0;font-size:22px}
+
+.hero{position:relative;overflow:hidden;padding:64px 0}
+.hero .hero-bg{position:absolute;inset:0;background-size:cover;background-repeat:no-repeat;filter:brightness(0.7);z-index:0}
+.hero .container{position:relative;z-index:2;color:#fff;padding:80px 20px}
+.eyebrow{font-size:14px;letter-spacing:1px;margin-bottom:12px;color:rgba(255,255,255,0.9)}
+h1{font-family:'Playfair Display', serif;font-size:44px;margin:0 0 12px}
+h1 span{font-weight:600}
+.lead{color:var(--muted);font-size:18px}
+.actions{margin-top:18px;display:flex;gap:12px}
+.btn{display:inline-block;padding:10px 16px;border-radius:8px;background:#fff;color:#111;text-decoration:none;font-weight:600}
+.btn.primary{background:var(--accent);color:#fff}
+
+.feature-strip{padding:28px 0;background:linear-gradient(90deg,#fafafa,#fff)}
+.feature-grid{display:flex;gap:16px;flex-wrap:wrap}
+.feature{flex:1 1 160px;padding:12px;text-align:center}
+.feature b{display:block;margin-bottom:8px}
+
+.section{padding:48px 0}
+.section.alt{background:var(--surface)}
+.section .section-title{font-size:28px;margin:6px 0 12px}
+.compact-title{font-size:22px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.card{background:#fff;padding:18px;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.04)}
+
+.land-band{position:relative;padding:64px 0;color:#fff}
+.land-band .hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(0.6);z-index:0}
+.land-band .container{position:relative;z-index:2}
+.tag{display:inline-block;background:rgba(255,255,255,0.12);padding:6px 10px;border-radius:999px;margin-bottom:8px}
+.meta{display:flex;gap:8px;margin-top:12px;color:var(--muted);flex-wrap:wrap}
+.project-feature{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center}
+.project-feature img{width:100%;height:auto;border-radius:8px}
+
+.footer{padding:20px 0;background:#111;color:#fff}
+.footer .container{display:flex;justify-content:space-between;align-items:center;gap:12px}
+
+@media(max-width:900px){
+  .grid-3{grid-template-columns:1fr}
+  .project-feature{grid-template-columns:1fr}
+  h1{font-size:32px}
+}
+@media(max-width:700px){
+  .menu{display:none;position:absolute;right:20px;top:64px;background:#fff;padding:12px;border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,0.12);flex-direction:column}
+  .menu-toggle{display:block}
+  .container.nav{position:relative}
+}
