@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Caribbean Storytime Studios</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="index.html"><img src="assets/logo.jpg" alt="logo" width="230" height="94"></a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav class="menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="partnerships.html">Partnerships</a>
+        <a class="active" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1>Contact</h1>
+      <p>Use the form below to get in touch. Replace <code>{your_form_id}</code> with your Formspree form ID when you're ready.</p>
+
+      <form action="https://formspree.io/f/{your_form_id}" method="POST" class="contact-form" novalidate>
+        <label style="display:block;margin-bottom:8px">Name
+          <input type="text" name="name" required style="width:100%;padding:8px;margin-top:6px;border-radius:6px;border:1px solid #ddd">
+        </label>
+
+        <label style="display:block;margin-bottom:8px">Email
+          <input type="email" name="_replyto" required style="width:100%;padding:8px;margin-top:6px;border-radius:6px;border:1px solid #ddd">
+        </label>
+
+        <label style="display:block;margin-bottom:8px">Message
+          <textarea name="message" rows="6" required style="width:100%;padding:8px;margin-top:6px;border-radius:6px;border:1px solid #ddd"></textarea>
+        </label>
+
+        <!-- honeypot (bots will fill this; humans won't) -->
+        <input type="text" name="_gotcha" style="display:none" aria-hidden="true">
+
+        <!-- optional Formspree fields -->
+        <input type="hidden" name="_subject" value="Website contact — Caribbean Storytime Studios">
+        <button type="submit" class="btn primary">Send message</button>
+
+        <noscript>
+          <p>Please email us directly at <a href="mailto:info@caribbeanstorytimestudios.com">info@caribbeanstorytimestudios.com</a> (JavaScript is required to use the form).</p>
+        </noscript>
+      </form>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div>© <span data-year></span> Caribbean Storytime Studios</div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
